@@ -18,7 +18,7 @@ final class ViewController: UIViewController {
     let ternOnTheLight = 1.0
     let ternOffTheLight = 0.3
     
-    private var currentLight = CurrentLight.red
+    var currentLight = CurrentLight.red
     
     
     override func viewDidLoad() {
