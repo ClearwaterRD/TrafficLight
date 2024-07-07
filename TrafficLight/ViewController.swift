@@ -15,10 +15,10 @@ final class ViewController: UIViewController {
     
     @IBOutlet weak var startButton: UIButton!
     
-    let ternOnTheLight = 1.0
-    let ternOffTheLight = 0.3
+    private let ternOnTheLight = 1.0
+    private let ternOffTheLight = 0.3
     
-    var currentLight = CurrentLight.red
+    private var currentLight = CurrentLight.red
     
     
     override func viewDidLoad() {
@@ -64,7 +64,7 @@ final class ViewController: UIViewController {
 
 
 extension ViewController {
-    enum CurrentLight {
+    private enum CurrentLight {
         case red
         case yellow
         case green
