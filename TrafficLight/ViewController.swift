@@ -24,22 +24,24 @@ final class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        redView.layer.cornerRadius = 50
         redView.alpha = ternOffTheLight
         
-        yellowView.layer.cornerRadius = 50
         yellowView.alpha = ternOffTheLight
         
-        greenView.layer.cornerRadius = 50
         greenView.alpha = ternOffTheLight
         
+        startButton.layer.cornerRadius = 10
         startButton.backgroundColor = .blue
         startButton.tintColor = .white
-        startButton.layer.cornerRadius = 10
         startButton.setTitle("START", for: .normal)
     }
-    
-    
+   
+    override func viewWillLayoutSubviews() {
+        redView.layer.cornerRadius = redView.frame.width / 2
+        yellowView.layer.cornerRadius = yellowView.frame.width / 2
+        greenView.layer.cornerRadius = greenView.frame.width / 2
+    }
+   
     @IBAction func startButtonDidTapped(_ sender: UIButton) {
         sender.setTitle("NEXT", for: .normal)
         
