@@ -42,8 +42,10 @@ final class ViewController: UIViewController {
         greenView.layer.cornerRadius = greenView.frame.width / 2
     }
    
-    @IBAction func startButtonDidTapped(_ sender: UIButton) {
-        sender.setTitle("NEXT", for: .normal)
+    @IBAction func startButtonDidTapped() {
+        if startButton.currentTitle == "START" {
+            startButton.setTitle("NEXT", for: .normal)
+        }
         
         switch currentLight {
         case .red:
